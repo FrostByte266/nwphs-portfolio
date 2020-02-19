@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Portfolio</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="scripts/index.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="stylesheets/timeline.css" />
+  <link rel="stylesheet" href="stylesheets/styles.css" />
+</head>
+
+<body data-spy="scroll" data-target="#nb" data-offset="100">
+  <!-- Loader wrapper -->
+  <div class="loader-wrapper" style="display: none">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="display: none;" id="nb">
+    <a class="navbar-brand" href="#" style="display: none"><img src="assets/NWPHS.png" alt="NWPHS" /></a>
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#project-timeline">Project Timeline</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Greeter -->
+  <div class="container" id="greeter">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="main-text">Hi, I'm BJ and I love computers.</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4" id="canvas"></div>
+      <div class="col-4"></div>
+    </div>
+    <div class="row call-to-action">
+      <div class="col-4"></div>
+      <div class="col-4" style="display: flex; align-items: center; justify-content: center;">
+        <button class="button" id="nw"><span>Check out my work</span></button>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+  <img src="assets/NWPHS.png" id="logo" style="display: none;" />
+
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
+    <!-- Hero -->
+    <section id="hero">
+      <h1>Driven to <span id="type-target"></span></h1>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <h1>A little bit about me</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat architecto fugit in dicta doloribus
+        exercitationem inventore cupiditate iusto necessitatibus. Nostrum tempora suscipit rerum corrupti, nobis
+        voluptates fugiat est repellendus atque beatae esse, maiores maxime animi dolorem porro harum voluptas dolorum
+        excepturi tenetur necessitatibus facere? Placeat nisi ea dolorem, provident minus iusto iste corporis,
+        recusandae perspiciatis, accusantium quasi voluptate deserunt enim. Est repudiandae quod natus, minus recusandae
+        sequi exercitationem nihil porro accusantium fugiat distinctio aperiam molestiae quos id cupiditate dignissimos
+        doloribus eligendi aliquid. Explicabo amet, debitis fugiat nihil hic totam dolor eos ipsam fugit esse quas quia
+        at, officiis iusto ratione deleniti, placeat adipisci accusantium perferendis? Aliquam, sequi sit. Itaque eum
+        iure perferendis at explicabo dolorem aut suscipit quam, perspiciatis tempore! Totam, animi ullam esse excepturi
+        assumenda voluptatum dolore praesentium voluptas accusamus suscipit. Ullam quod aspernatur distinctio dolorem
+        sed officia eligendi architecto cupiditate at, aperiam cum in animi facilis exercitationem quaerat tempora rerum
+        asperiores unde odit quibusdam temporibus eveniet explicabo? Dolores quas cum amet, facilis laboriosam neque quo
+        voluptate laudantium iusto mollitia quos repudiandae possimus odit voluptates quae distinctio fugiat. Corrupti
+        labore temporibus incidunt tempora odit assumenda iusto, non aliquam cumque quo sequi voluptatem quidem cum
+        pariatur! Earum recusandae quos beatae mollitia temporibus unde quam cumque soluta odit similique deserunt,
+        sapiente deleniti, consequuntur dolores quaerat quasi eius aut quis illo quae. Sed et in, ullam maxime sunt
+        tempora voluptate vitae, excepturi repudiandae doloribus atque alias adipisci recusandae, quia commodi voluptas
+        enim architecto ducimus. Ratione voluptas qui consectetur voluptate cum veritatis omnis impedit quod nostrum
+        facilis dolorum ex ad et eos totam temporibus, consequuntur magni doloremque maxime corporis aliquid suscipit
+        commodi? Et voluptates, vel corporis, vero fugiat obcaecati voluptatibus officia eaque, asperiores reprehenderit
+        non accusamus rerum. Inventore quibusdam veniam delectus, ducimus voluptatibus provident soluta optio nesciunt
+        officiis, necessitatibus quas laborum laudantium nobis dolores minus amet, deleniti tempore aut. Impedit in
+        sapiente dolorum assumenda dolorem veniam iusto provident, ut alias obcaecati quae officiis incidunt enim? Ex
+        ipsa blanditiis laborum ad aut corrupti accusamus quae? Voluptas ducimus voluptatum cum velit nisi, obcaecati
+        similique voluptatem tempora ex nihil, deserunt fugit ad a suscipit aliquam amet ullam pariatur natus. Quas,
+        voluptatum repellat? At aut eos accusantium ipsam beatae dolores nihil quas recusandae minus totam. Id autem
+        laboriosam deserunt, dolores provident nobis quasi, nihil laudantium veritatis illum quos maxime ullam laborum
+        quas repellendus ea voluptatum inventore sed deleniti officiis corrupti, asperiores maiores. Esse, adipisci sed
+        impedit velit voluptatibus doloremque ipsam, alias, assumenda in quisquam ab distinctio sapiente ducimus nisi
+        quo fuga ut soluta nostrum. Dolorem nihil voluptatibus amet quasi dicta culpa ut suscipit. Ducimus, asperiores
+        et, sequi ipsum quas quidem fugiat, quasi dignissimos laudantium odit quibusdam sed quisquam deleniti
+        necessitatibus quia mollitia! Culpa eos hic, ad eveniet esse officia veritatis labore inventore vitae quasi
+        ducimus sequi nemo laborum nam ut animi architecto vero magnam eaque doloremque odit dignissimos, perspiciatis
+        nulla. Eum non explicabo, officia eveniet iusto reiciendis, voluptate totam aut rem cumque quia atque doloremque
+        maiores dicta quod fugit veritatis! Placeat eveniet voluptates eum porro nesciunt harum!
+      </p>
+    </section>
+
+    <!-- Project Timeline -->
+    <section id="project-timeline">
+      <h1>Project Timeline</h1>
+    </section>
+    <section id="project-timeline">
+      <div class="timeline">
+        <!-- Feshman -->
+        <h2 class="timeline-item timeline-year">Freshman</h2>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Kerbal Space Program</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus assumenda modi
+            expedita animi eaque repudiandae fugiat officia fuga praesentium!</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Beehive Build and Design</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis aliquam
+            officia ad accusamus? Quaerat possimus ad provident quas id inventore?</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Age 681</h3>
+          <p class="timeline-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut amet natus odit
+            recusandae? Corporis nam ipsa sunt, ratione aut provident!</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Rocket Engine Project</h3>
+          <p class="timeline-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium blanditiis
+            mollitia dolorem quibusdam dolor? Reiciendis iste ex dolor asperiores incidunt?</p>
+        </div>
+
+        <!-- Sophomore -->
+        <h2 class="timeline-item timeline-year">Sophomore</h2>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Passage</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda reiciendis quo
+            nisi animi enim nulla tempora, explicabo commodi sequi dolor!</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Wolf Studies</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ab velit
+            ipsum ad, obcaecati aspernatur quod optio sed sequi perferendis.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Wolf RFID</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam
+            debitis similique error ratione accusamus incidunt obcaecati sint, maxime ullam.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">Urban Studies</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus in consequatur
+            saepe deserunt assumenda nulla nobis, quas delectus. Tenetur, exercitationem?</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-title">SIR Model</h3>
+          <p class="timeline-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sint voluptas
+            quos quis libero ea quam nobis voluptates asperiores dolorum.</p>
+        </div>
+
+        <!-- Junior -->
+        <h2 class="timeline-item timeline-year">Junior</h2>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
