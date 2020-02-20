@@ -123,6 +123,7 @@ body {
   padding-right: 50%;
   padding-left: 10%;
   font-size: 40pt;
+  white-space: nowrap;
   color: white;
 }
 

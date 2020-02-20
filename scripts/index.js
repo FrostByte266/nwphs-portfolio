@@ -133,7 +133,6 @@ $(document).ready(() => {
     backSpeed: 30
   });
 
-  // AOS.init();
   $(".loader-wrapper").fadeOut("slow");
 });
 
