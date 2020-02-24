@@ -12,9 +12,11 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="scripts/lightbox.js"></script>
   <script src="scripts/index.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="stylesheets/lightbox.css" />
   <link rel="stylesheet" href="stylesheets/timeline.css" />
   <link rel="stylesheet" href="stylesheets/styles.css" />
 </head>
@@ -110,8 +112,7 @@
 
         <div class="timeline-item">
           <h3 class="timeline-title">Kerbal Space Program</h3>
-          <p class="timeline-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis aliquam
-            officia ad accusamus? Quaerat possimus ad provident quas id inventore?</p>
+          <p class="timeline-content">Who said video games were just for fun?</p>
 
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ksp-modal">
             View more
@@ -121,28 +122,30 @@
             <div class="modal-dialog modal-xl" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="ksp-modal-title">Modal title</h5>
+                  <h5 class="modal-title" id="ksp-modal-title">KSP</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel accusamus dolorem incidunt
-                  perferendis autem doloribus nihil minima alias, ducimus architecto? Quis necessitatibus incidunt dolor
-                  provident exercitationem quas? Illo ipsa suscipit ullam odio ad consequuntur sint praesentium amet
-                  eius quae sed debitis delectus hic quos, sit accusamus quis molestiae aperiam. Quaerat, iusto tempore.
-                  Doloremque cumque nam veritatis, maxime libero mollitia voluptatibus quis ex magnam repudiandae
-                  dignissimos laborum tempore dicta delectus? Maiores dignissimos laudantium, laborum dolorum impedit
-                  nam vero exercitationem. Voluptas beatae a sed. Maiores, voluptatibus ab reiciendis aperiam laudantium
-                  distinctio enim quos? Inventore eos tenetur modi nam omnis saepe est error aliquam dolor atque
-                  deserunt aut, sapiente rerum recusandae magni ullam. Neque facere est aperiam doloribus sapiente.
-                  Sapiente, repellat aspernatur? Est non voluptatum inventore officia eius, magni voluptatem nisi sint,
-                  voluptas ad expedita dignissimos! Dignissimos nam nemo quae. Enim, optio eaque aliquam fugit nobis
-                  fuga est mollitia voluptates quaerat impedit iste voluptatem repellat voluptate vero dolorem quia
-                  provident deserunt ullam expedita quo quidem quos tempore obcaecati sint. Dicta minus, incidunt
-                  tenetur ipsam aliquid impedit ipsum voluptate magni nesciunt perspiciatis, in fugiat distinctio.
-                  Tempora sint, aperiam in obcaecati dolores asperiores! Ea dolorum modi dolores recusandae amet enim.
-                  At quas officiis quibusdam.
+                  This was one of my first big projects I did at NWPHS. I used a game called Kerbal Space Program to
+                  recreate many historic US space programs, as well as some current and future programs. I started with
+                  the small steps taken with project Mercury, then moved all the way up to the
+                  Apollo program where we brought man to the moon (or in KSP the mun). I also focused on some programs
+                  that are currently in planning or early testing stages such as the SpaceX Dragon and Boeing's
+                  CST-100. This project was my first long project, and there were many points where I wanted to give up
+                  on it, however I kept going, and it taught me how to keep going even when you don't want to or you
+                  don't think you can. In the end however I compiled all of it into a website and detailed all of my
+                  missions and the craft development process.
+                  I also covered some of the key physics principles that allowed these vehicles to fly. You can view the
+                  final product <a href="https://sites.google.com/nwphs.org/kspproject/home">via this link</a>
+                  <!-- <a href="assets/ksp/img1.png" data-lightbox="ksp">1</a> -->
+                  <div class="modal-img-gallery">
+                    <a href="assets/ksp/img1.png" data-lightbox="ksp" data-title="Apollo Saturn V recreation"><img src="assets/ksp/img1.png" alt="test"></a>
+                    <a href="assets/ksp/img2.png" data-lightbox="ksp" data-title="Dragon docks with the ISS"><img src="assets/ksp/img2.png" alt="test"></a>
+                    <a href="assets/ksp/img3.png" data-lightbox="ksp" data-title="Falcon 9 landing"><img src="assets/ksp/img3.png" alt="test"></a>
+                  </div>
+
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

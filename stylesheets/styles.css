@@ -111,6 +111,7 @@ body {
   background-image: url("../assets/hero.jpg");
   background-position: top left;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 #hero > h1 {
@@ -147,4 +148,26 @@ body {
 
 #project-timeline > p {
   font-size: 14pt;
+}
+
+.modal-body {
+  font-size: 14pt;
+}
+
+.modal-img-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.modal-img-gallery::before{
+  content: "\A";
+}
+
+.modal-img-gallery > a > img {
+  padding: 20px;
+  max-width: 250px;
+  height: auto;
 }
