@@ -1,4 +1,4 @@
 #!/bin/bash
-last=$(docker run --rm -d -p 80:80 -v $(readlink -f ~/Documents/portfolio):/usr/local/apache2/htdocs portfolio)
+last=$(docker run --rm -d -p 80:80 -v $PWD:/usr/local/apache2/htdocs portfolio)
 read -n 1 -s -r -p "Press any key to continue"
-docker kill $last
+docker kill $last > /dev/null

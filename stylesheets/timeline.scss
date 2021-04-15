@@ -1,5 +1,7 @@
 $color: black;
 $lineColor: black;
+$lineColorProject: black;
+$lineColorWorkshop: grey;
 $fontColor: #bbb;
 $bgColor1: black;
 $bgColor2: black;
@@ -37,12 +39,50 @@ $breakpoint: 700px;
   }
 }
 
+.project {
+  border: 2px solid $lineColorProject;
+  &:before {
+    border-color: $lineColorProject $lineColorProject transparent transparent;
+  }
+  @media screen and (min-width: $breakpoint) {
+    &:nth-of-type(2n) {
+      //border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
+      border-image-slice: 1;
+
+      &:before {
+        right: auto;
+        left: -10px;
+        border-color:transparent transparent $lineColorProject $lineColorProject;
+      }
+    }
+  }
+}
+
+.workshop {
+  border: 2px solid $lineColorWorkshop;
+  &:before {
+    border-color: $lineColorWorkshop $lineColorWorkshop transparent transparent;
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    &:nth-of-type(2n) {
+      //border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
+      border-image-slice: 1;
+
+      &:before {
+        right: auto;
+        left: -10px;
+        border-color:transparent transparent $lineColorWorkshop $lineColorWorkshop;
+      }
+    }
+  }
+}
+
 .timeline-item {
   
   padding: 1rem;
-  border: 2px solid $lineColor;
-  border-image: linear-gradient(to right, $color 0%, $lineColor 100%);
-  border-image-slice: 1;
+//  border-image: linear-gradient(to right, $color 0%, $lineColor 100%);
+//  border-image-slice: 1;
   position: relative;
   margin: 1rem 3rem 1rem 1rem;
   clear: both;
@@ -57,7 +97,6 @@ $breakpoint: 700px;
     right: -10px;
     top: calc(50% - 5px);
     border-style: solid;
-    border-color: $lineColor $lineColor transparent transparent;
     border-width: 10px;
     transform: rotate(45deg);
   }
@@ -69,13 +108,12 @@ $breakpoint: 700px;
     &:nth-of-type(2n) {
       float: right;
       margin: 1rem;
-      border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
+      //border-image: linear-gradient(to right, $lineColor 0%, $color 100%);
       border-image-slice: 1;
 
       &:before {
         right: auto;
         left: -10px;
-      border-color:transparent transparent $lineColor $lineColor;
       }
     }
   }
@@ -102,6 +140,7 @@ $breakpoint: 700px;
     &:nth-of-type(2n) {
       float: none;
       margin: 0 auto;
+      //z-index: -1;
       border-image: none;
   
       &:before {
@@ -113,7 +152,7 @@ $breakpoint: 700px;
 
 .timeline-title {
   margin: 0;
-  font-family: 'Open Sans';
+  //font-family: 'Open Sans';
   font-size: 1.5em;
 }
 

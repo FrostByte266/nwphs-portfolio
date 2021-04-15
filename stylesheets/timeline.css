@@ -2,69 +2,74 @@
   position: relative;
   padding: 1rem;
   margin: 0 auto;
-  max-width: 1300px;
-}
-.timeline:before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  border: 1px solid black;
-  right: 40px;
-  top: 0;
-}
-.timeline:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (min-width: 700px) {
-  .timeline {
-    padding: 2rem;
-  }
+  max-width: 1300px; }
   .timeline:before {
-    left: calc(50% - 1px);
-    right: auto;
-  }
-}
+    content: '';
+    position: absolute;
+    height: 100%;
+    border: 1px solid black;
+    right: 40px;
+    top: 0; }
+  .timeline:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (min-width: 700px) {
+    .timeline {
+      padding: 2rem; }
+      .timeline:before {
+        left: calc(50% - 1px);
+        right: auto; } }
+
+.project {
+  border: 2px solid black; }
+  .project:before {
+    border-color: black black transparent transparent; }
+  @media screen and (min-width: 700px) {
+    .project:nth-of-type(2n) {
+      border-image-slice: 1; }
+      .project:nth-of-type(2n):before {
+        right: auto;
+        left: -10px;
+        border-color: transparent transparent black black; } }
+
+.workshop {
+  border: 2px solid grey; }
+  .workshop:before {
+    border-color: grey grey transparent transparent; }
+  @media screen and (min-width: 700px) {
+    .workshop:nth-of-type(2n) {
+      border-image-slice: 1; }
+      .workshop:nth-of-type(2n):before {
+        right: auto;
+        left: -10px;
+        border-color: transparent transparent grey grey; } }
 
 .timeline-item {
   padding: 1rem;
-  border: 2px solid black;
-  border-image: linear-gradient(to right, black 0%, black 100%);
-  border-image-slice: 1;
   position: relative;
   margin: 1rem 3rem 1rem 1rem;
-  clear: both;
-}
-.timeline-item:after, .timeline-item:before {
-  content: "";
-  position: absolute;
-}
-.timeline-item:before {
-  right: -10px;
-  top: calc(50% - 5px);
-  border-style: solid;
-  border-color: black black transparent transparent;
-  border-width: 10px;
-  transform: rotate(45deg);
-}
-@media screen and (min-width: 700px) {
-  .timeline-item {
-    width: 44%;
-    margin: 1rem;
-  }
-  .timeline-item:nth-of-type(2n) {
-    float: right;
-    margin: 1rem;
-    border-image: linear-gradient(to right, black 0%, black 100%);
-    border-image-slice: 1;
-  }
-  .timeline-item:nth-of-type(2n):before {
-    right: auto;
-    left: -10px;
-    border-color: transparent transparent black black;
-  }
-}
+  clear: both; }
+  .timeline-item:after, .timeline-item:before {
+    content: '';
+    position: absolute; }
+  .timeline-item:before {
+    right: -10px;
+    top: calc(50% - 5px);
+    border-style: solid;
+    border-width: 10px;
+    transform: rotate(45deg); }
+  @media screen and (min-width: 700px) {
+    .timeline-item {
+      width: 44%;
+      margin: 1rem; }
+      .timeline-item:nth-of-type(2n) {
+        float: right;
+        margin: 1rem;
+        border-image-slice: 1; }
+        .timeline-item:nth-of-type(2n):before {
+          right: auto;
+          left: -10px; } }
 
 .timeline-year {
   text-align: center;
@@ -74,36 +79,27 @@
   background-color: white;
   line-height: 1;
   border-image: none;
-  padding: 0.5rem 1rem 1rem;
-}
-.timeline-year:before {
-  display: none;
-}
-@media screen and (min-width: 700px) {
-  .timeline-year {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .timeline-year:nth-of-type(2n) {
-    float: none;
-    margin: 0 auto;
-    border-image: none;
-  }
-  .timeline-year:nth-of-type(2n):before {
-    display: none;
-  }
-}
+  padding: .5rem 1rem 1rem; }
+  .timeline-year:before {
+    display: none; }
+  @media screen and (min-width: 700px) {
+    .timeline-year {
+      text-align: center;
+      margin: 0 auto; }
+      .timeline-year:nth-of-type(2n) {
+        float: none;
+        margin: 0 auto;
+        border-image: none; }
+        .timeline-year:nth-of-type(2n):before {
+          display: none; } }
 
 .timeline-title {
   margin: 0;
-  font-family: "Open Sans";
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
 
 .timeline-content {
   line-height: 1.5;
   font-size: 1rem;
-  margin: 0.5rem 0 0;
-}
+  margin: .5rem 0 0; }
 
 /*# sourceMappingURL=timeline.css.map */

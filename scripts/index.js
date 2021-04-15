@@ -118,14 +118,14 @@ $(document).ready(() => {
       .animate({
         backgroundColor: "#ffffff"
       }, 1500, () => {
-        $(".navbar").css("z-index", 0).show().children().show();
+        $(".navbar").css("z-index", 1).show().children().show();
         $(".navbar-brand").hide();
         $("#main-content").show().children().show()
       }).css("overflow", "visible");
   });
 
   // Initialize greeter typer
-  const typer = new Typed("#type-target", {
+  new Typed("#type-target", {
     strings: ["explore my world.", "seek my path.", "build my community."],
     loop: true,
     backDelay: 3000,
