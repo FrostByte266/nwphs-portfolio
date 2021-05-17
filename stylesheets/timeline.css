@@ -22,28 +22,28 @@
         right: auto; } }
 
 .project {
-  border: 2px solid black; }
+  border: 2px solid blue; }
   .project:before {
-    border-color: black black transparent transparent; }
+    border-color: blue blue transparent transparent; }
   @media screen and (min-width: 700px) {
     .project:nth-of-type(2n) {
       border-image-slice: 1; }
       .project:nth-of-type(2n):before {
         right: auto;
         left: -10px;
-        border-color: transparent transparent black black; } }
+        border-color: transparent transparent blue blue; } }
 
 .workshop {
-  border: 2px solid grey; }
+  border: 2px solid green; }
   .workshop:before {
-    border-color: grey grey transparent transparent; }
+    border-color: green green transparent transparent; }
   @media screen and (min-width: 700px) {
     .workshop:nth-of-type(2n) {
       border-image-slice: 1; }
       .workshop:nth-of-type(2n):before {
         right: auto;
         left: -10px;
-        border-color: transparent transparent grey grey; } }
+        border-color: transparent transparent green green; } }
 
 .timeline-item {
   padding: 1rem;
